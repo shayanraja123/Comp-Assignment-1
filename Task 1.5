@@ -1,0 +1,25 @@
+ Dim Member As String = ""
+        Dim MemId As Integer = 0
+        Dim tel As String
+        Dim MemDate As Date
+
+        FileOpen(1, "d:/Membership.txt", OpenMode.Input)
+        FileOpen(2, "d:/Membership2.txt", OpenMode.Output)
+
+        Do While EOF(1) = False
+            Input(1, Member)
+            Input(1, MemId)
+            Console.WriteLine("Enter Further Details For: " & Member)
+            Console.Write("Telephone Number:")
+            tel = Console.ReadLine
+            Console.Write("Membership Start Date:")
+            MemDate = Console.ReadLine
+
+            WriteLine(2, Member)
+            WriteLine(2, MemId)
+            WriteLine(2, tel)
+            WriteLine(2, MemDate)
+        Loop
+
+        FileClose(1)
+        FileClose(2)
