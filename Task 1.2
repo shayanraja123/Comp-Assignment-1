@@ -1,0 +1,9 @@
+ Dim MemId As Integer = 0
+            Dim Member As String = ""
+        FileOpen(1, "d:/Membership.txt", OpenMode.Input)
+        Do While Not EOF(1)
+            Input(1, Member)
+            Input(1, MemId)
+            Console.WriteLine("Member's Name:" & Member)
+            Console.WriteLine("Member's Id:" & MemId)
+        Loop
