@@ -1,0 +1,21 @@
+ Dim MemId As Integer = 0
+        Dim Member As String = ""
+        Dim NSF As String = ""
+        Dim IsFound As Boolean
+        IsFound = False
+        Console.Write("Enter Member's name to search for:")
+        NSF = Console.ReadLine
+        NSF = LCase(NSF)
+        FileOpen(1, "d:/Membership.txt", OpenMode.Input)
+        Do While EOF(1) = False And IsFound = False
+            Input(1, Member)
+            Input(1, MemId)
+            If Member = NSF Then
+                IsFound = True
+                Console.WriteLine("Member's ID:" & MemId)
+            End If
+        Loop
+        FileClose(1)
+        If IsFound = False Then
+            Console.WriteLine(NSF & " Record Not Found")
+        End If
