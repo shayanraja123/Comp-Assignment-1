@@ -1,0 +1,17 @@
+ Dim MemId As Integer = 0
+        Dim Member As String = ""
+        Dim NOR As Integer = 0
+        Dim counter As Integer = 0
+        Console.Write("Enter Number Of Records To Save:")
+        NOR = Console.ReadLine
+        FileOpen(1, "d:/Membership.txt", OpenMode.Append)
+        For counter = 0 To NOR - 1 Step 1
+            Console.Write("Enter Member's Name:")
+            Member = Console.ReadLine
+            Console.Write("Enter Member's ID:")
+            MemId = Console.ReadLine
+
+            WriteLine(1, Member)
+            WriteLine(1, MemId)
+        Next
+        FileClose(1)
